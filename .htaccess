@@ -1,11 +1,5 @@
 <IfModule mod_rewrite.c>
-
-  RewriteEngine On 
-  Options -Multiviews
-
-  RewriteBase /BCM_MVC/Custom_MVC_Framework_By_Me/
-  RewriteCond %{REQUEST_FILENAME} !-f 
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
-
+     RewriteEngine On
+     RewriteRule ^$ public/ [L] 
+     RewriteRule (.*) public/$1 [L]
 </IfModule>
